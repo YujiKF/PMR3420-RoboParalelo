@@ -8,7 +8,7 @@
 // =================================================================
 // Alterar "\\\\.\\COMx" para porta serial correta.
 // As quatro barras invertidas são necessárias para o formato da string em C.
-#define SERIAL_PORT_NAME "\\\\.\\COM3"
+#define SERIAL_PORT_NAME "\\\\.\\COM8"
 
 // Baudrate correto para o firmware pidx.X, conforme o README e o código-fonte serial.c
 #define BAUD_RATE CBR_115200
