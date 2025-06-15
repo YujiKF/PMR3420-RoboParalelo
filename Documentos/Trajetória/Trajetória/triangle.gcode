@@ -1,0 +1,6 @@
+G21 ; usar mm
+G90 ; coordenadas absolutas
+G00 X15.0 Y28.66
+G01 X7.5 Y15.67
+G01 X22.5 Y15.67
+G01 X15.0 Y28.66
