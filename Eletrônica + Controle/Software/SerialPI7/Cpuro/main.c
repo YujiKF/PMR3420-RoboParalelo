@@ -6,61 +6,65 @@
 // =================================================================
 //                      CONFIGURAÇÕES
 // =================================================================
-// Alterar "\\\\.\\COMx" para porta serial correta.
-// As quatro barras invertidas são necessárias para o formato da string em C.
-#define SERIAL_PORT_NAME "\\\\.\\COM8"
-
-// Baudrate correto para o firmware pidx.X, conforme o README e o código-fonte serial.c
+#define SERIAL_PORT_NAME "\\\\.\\COM14"
 #define BAUD_RATE CBR_115200
 
-// Protótipo da função
 void sendCommandToPIC(HANDLE hSerial, const char* command);
 void display_menu();
 
 int main() {
-    HANDLE hSerial; // "Handle" é como o Windows identifica a conexão
-    DCB dcbSerialParams = {0}; // Estrutura para configurar os parâmetros da serial
+    HANDLE hSerial;
+    DCB dcbSerialParams = {0};
 
-    // --- 1. Abrir a Porta Serial ---
+    // --- Abrir Porta Serial ---
     hSerial = CreateFileA(
-        SERIAL_PORT_NAME,        // Nome da porta
-        GENERIC_WRITE,           // Abrir para escrita
-        0,                       // Sem compartilhamento
-        NULL,                    // Sem segurança
-        OPEN_EXISTING,           // Abrir apenas se a porta existir
-        FILE_ATTRIBUTE_NORMAL,   // Atributos normais
-        NULL                     // Sem template
+        SERIAL_PORT_NAME,
+        GENERIC_READ | GENERIC_WRITE, // Permitir leitura e escrita
+        0,
+        NULL,
+        OPEN_EXISTING,
+        FILE_ATTRIBUTE_NORMAL,
+        NULL
     );
 
     if (hSerial == INVALID_HANDLE_VALUE) {
-        fprintf(stderr, "ERRO: Nao foi possivel abrir a porta %s. Verifique se esta correta e nao esta em uso.\n", SERIAL_PORT_NAME);
-        system("pause"); // Pausa para o usuário ler o erro antes de fechar
+        fprintf(stderr, "ERRO: Nao foi possivel abrir a porta %s.\n", SERIAL_PORT_NAME);
+        system("pause");
         return 1;
     }
 
-    // --- 2. Configurar a Porta Serial ---
+    // --- Configurar Porta Serial ---
     dcbSerialParams.DCBlength = sizeof(dcbSerialParams);
     if (!GetCommState(hSerial, &dcbSerialParams)) {
-        fprintf(stderr, "ERRO: Nao foi possivel obter as configuracoes da porta.\n");
+        fprintf(stderr, "ERRO: Nao foi possivel obter configuracoes.\n");
         CloseHandle(hSerial);
         return 1;
     }
 
-    dcbSerialParams.BaudRate = BAUD_RATE;     // Definindo o Baudrate
-    dcbSerialParams.ByteSize = 8;             // 8 bits de dados
-    dcbSerialParams.StopBits = ONESTOPBIT;    // 1 stop bit
-    dcbSerialParams.Parity   = NOPARITY;      // Sem paridade
+    dcbSerialParams.BaudRate = BAUD_RATE;
+    dcbSerialParams.ByteSize = 8;
+    dcbSerialParams.StopBits = ONESTOPBIT;
+    dcbSerialParams.Parity   = NOPARITY;
 
     if (!SetCommState(hSerial, &dcbSerialParams)) {
-        fprintf(stderr, "ERRO: Nao foi possivel definir as configuracoes da porta.\n");
+        fprintf(stderr, "ERRO: Nao foi possivel definir configuracoes.\n");
         CloseHandle(hSerial);
         return 1;
     }
 
-    printf("--- Terminal de Teste em C Puro para PIC ---\n");
+    // --- Configurar Timeouts ---
+    COMMTIMEOUTS timeouts = {0};
+    timeouts.ReadIntervalTimeout = 50;
+    timeouts.ReadTotalTimeoutConstant = 50;
+    timeouts.ReadTotalTimeoutMultiplier = 10;
+    timeouts.WriteTotalTimeoutConstant = 50;
+    timeouts.WriteTotalTimeoutMultiplier = 10;
+    SetCommTimeouts(hSerial, &timeouts);
+
+    printf("--- Terminal de Teste para PIC (com loopback) ---\n");
     printf("Conectado com sucesso a %s!\n", SERIAL_PORT_NAME);
 
-    // --- 3. Loop Principal com Menu Interativo ---
+    // --- Loop Principal ---
     int choice;
     double value;
     char command_buffer[100];
@@ -68,8 +72,7 @@ int main() {
     while (1) {
         display_menu();
         if (scanf("%d", &choice) != 1) {
-            printf("\nOpcao invalida. Por favor, digite um numero.\n");
-            // Limpa o buffer de entrada do teclado
+            printf("\nOpcao invalida. Digite um numero.\n");
             while (getchar() != '\n');
             continue;
         }
@@ -78,22 +81,19 @@ int main() {
             break;
         }
 
-        // Comando 'home' não precisa de valor
         if (choice == 5) {
             sendCommandToPIC(hSerial, ":ah;");
             continue;
         }
-        
-        // Pede um valor para os outros comandos
+
         if (choice >= 1 && choice <= 4) {
             printf("Digite o valor: ");
             if (scanf("%lf", &value) != 1) {
-                printf("\nValor invalido. Por favor, digite um numero.\n");
+                printf("\nValor invalido. Digite um numero.\n");
                 while (getchar() != '\n');
                 continue;
             }
 
-            // Monta a string de comando de forma segura
             switch (choice) {
                 case 1: snprintf(command_buffer, sizeof(command_buffer), ":ap%.2f;", value); break;
                 case 2: snprintf(command_buffer, sizeof(command_buffer), ":ag%.2f;", value); break;
@@ -106,33 +106,47 @@ int main() {
         }
     }
 
-    // --- 4. Fechar a Conexão ---
+    // --- Fechar Porta Serial ---
     CloseHandle(hSerial);
     printf("Porta serial fechada. Encerrando.\n");
     return 0;
 }
 
-// Função que envia o comando para o PIC, caractere por caractere
 void sendCommandToPIC(HANDLE hSerial, const char* command) {
     DWORD bytes_written;
+    DWORD bytes_read;
+    char response[256] = {0};
+
     size_t len = strlen(command);
-    
     printf("\n-> Enviando comando: %s\n", command);
 
-    // O protocolo do PI-7 exige um delay de 1ms entre cada caractere
     for (size_t i = 0; i < len; ++i) {
         if (!WriteFile(hSerial, &command[i], 1, &bytes_written, NULL)) {
             fprintf(stderr, "ERRO: Falha ao escrever na porta serial.\n");
             return;
         }
-        Sleep(1); // Pausa de 1ms 
+        Sleep(1);
     }
+
     printf("   Comando enviado com sucesso.\n");
+
+    Sleep(100); // Aguarda resposta
+
+    if (!ReadFile(hSerial, response, sizeof(response) - 1, &bytes_read, NULL)) {
+        fprintf(stderr, "ERRO: Falha ao ler da porta serial.\n");
+        return;
+    }
+
+    if (bytes_read > 0) {
+        response[bytes_read] = '\0';
+        printf("   Eco recebido: %s\n", response);
+    } else {
+        printf("   Nenhuma resposta recebida.\n");
+    }
 }
 
-// Função que apenas exibe o menu de opções
 void display_menu() {
-    printf("\n--- Controlador Interativo do PIC (PI-7) ---\n");
+    printf("\n--- Menu de Comandos ---\n");
     printf("1. Definir Posicao (p)\n");
     printf("2. Definir Ganho Proporcional (g)\n");
     printf("3. Definir Ganho Integral (i)\n");

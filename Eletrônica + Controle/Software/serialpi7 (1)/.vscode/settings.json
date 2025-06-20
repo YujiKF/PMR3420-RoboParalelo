@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "ostream": "cpp",
+        "charconv": "cpp",
+        "xmemory": "cpp"
+    }
+}
