@@ -1,0 +1,675 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F886 ]
+[d frameptr 0 ]
+"11 /Users/jun/Documents/PMR3406/PI-7/PID/position_sensor.X/position_sensor.c
+[v _pos_init pos_init `(v  1 e 1 0 ]
+"32
+[v _pos_encoderStatus pos_encoderStatus `(c  1 e 1 0 ]
+"38
+[v _pos_UpdatePosition pos_UpdatePosition `(v  1 e 1 0 ]
+"48
+[v _pos_setCurrentPosition pos_setCurrentPosition `(v  1 e 1 0 ]
+"52
+[v _pos_getCurrentPosition pos_getCurrentPosition `(l  1 e 4 0 ]
+"5 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
+"43 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+"5 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\printf.c
+[v _printf printf `(i  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"242
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"4 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+"6 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"39 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\delay.c
+[v _DelayMs DelayMs `(v  1 e 1 0 ]
+"7 motor.c
+[v _mot_setExcitation mot_setExcitation `(v  1 e 1 0 ]
+"49
+[v _mot_init mot_init `(v  1 e 1 0 ]
+"19 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\multitasking.c
+[v _createTask createTask `(v  1 e 1 0 ]
+"25
+[v _executeTasks executeTasks `(v  1 e 1 0 ]
+"22 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\pid.c
+[v _pid_scaleExcitation pid_scaleExcitation `(i  1 e 2 0 ]
+"40
+[v _pid_pid pid_pid `(v  1 e 1 0 ]
+"58
+[v _pid_setPoint pid_setPoint `(v  1 e 1 0 ]
+"62
+[v _pid_setDerivativeGain pid_setDerivativeGain `(v  1 e 1 0 ]
+"66
+[v _pid_setIntegralGain pid_setIntegralGain `(v  1 e 1 0 ]
+"70
+[v _pid_setProportionalGain pid_setProportionalGain `(v  1 e 1 0 ]
+"74
+[v _pid_clearError pid_clearError `(v  1 e 1 0 ]
+"79
+[v _pid_init pid_init `(v  1 e 1 0 ]
+"49 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\position_controller_main.c
+[v _pic_init pic_init `(v  1 e 1 0 ]
+"80
+[v _isr isr `II(v  1 e 1 0 ]
+"107
+[v _sys_init sys_init `(v  1 e 1 0 ]
+"116
+[v _main main `(v  1 e 1 0 ]
+"38 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\protocol.c
+[v _cleanupBuffer cleanupBuffer `(v  1 e 1 0 ]
+"50
+[v _framingError framingError `(v  1 e 1 0 ]
+"55
+[v _isValidCmd isValidCmd `(i  1 e 2 0 ]
+"65
+[v _addToIncomingBuffer addToIncomingBuffer `(v  1 e 1 0 ]
+"70
+[v _toMsgType toMsgType `(uc  1 e 1 0 ]
+"85
+[v _isValid isValid `(i  1 e 2 0 ]
+"41 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X/protocol.h
+[s S180 . 11 `uc 1 messageType 1 0 `[10]uc 1 value 10 1 ]
+"99 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\protocol.c
+[v _pro_getMessage pro_getMessage `(S180  1 e 11 0 ]
+"173
+[v _pro_init pro_init `(v  1 e 1 0 ]
+"183
+[v _pro_setMyId pro_setMyId `(v  1 e 1 0 ]
+"29 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\serial.c
+[v _ser_init ser_init `(v  1 e 1 0 ]
+"102
+[v _putch putch `(v  1 e 1 0 ]
+"149
+[v _chkchr chkchr `(uc  1 e 1 0 ]
+"156
+[v _clear_usart_errors clear_usart_errors `(v  1 e 1 0 ]
+"168
+[v _putchhex putchhex `(v  1 e 1 0 ]
+"33 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\tasks.c
+[v _pid_task pid_task `(v  1 e 1 0 ]
+"41
+[v _protocol_task protocol_task `(v  1 e 1 0 ]
+"72
+[v _led_task led_task `(v  1 e 1 0 ]
+"80
+[v _initTasks initTasks `(v  1 e 1 0 ]
+"13 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\utils.c
+[v _convertToReal convertToReal `(f  1 e 4 0 ]
+"4 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X/multitasking.h
+[v _tsk_timeStamp tsk_timeStamp `VEl  1 e 4 0 ]
+"693 /Applications/microchip/mplabx/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8/pic/include/proc/pic16f886.h
+[v _T2CON T2CON `VEuc  1 e 1 @18 ]
+"848
+[v _CCPR1L CCPR1L `VEuc  1 e 1 @21 ]
+"862
+[v _CCP1CON CCP1CON `VEuc  1 e 1 @23 ]
+"1075
+[v _CCPR2L CCPR2L `VEuc  1 e 1 @27 ]
+"1089
+[v _CCP2CON CCP2CON `VEuc  1 e 1 @29 ]
+"1883
+[v _PR2 PR2 `VEuc  1 e 1 @146 ]
+"3607
+[v _CCP1X CCP1X `VEb  1 e 0 @189 ]
+"3610
+[v _CCP1Y CCP1Y `VEb  1 e 0 @188 ]
+"3631
+[v _CCP2X CCP2X `VEb  1 e 0 @237 ]
+"3634
+[v _CCP2Y CCP2Y `VEb  1 e 0 @236 ]
+"3667
+[v _DC1B0 DC1B0 `VEb  1 e 0 @188 ]
+"3670
+[v _DC1B1 DC1B1 `VEb  1 e 0 @189 ]
+"3673
+[v _DC2B0 DC2B0 `VEb  1 e 0 @236 ]
+"3676
+[v _DC2B1 DC2B1 `VEb  1 e 0 @237 ]
+"4168
+[v _TMR2IF TMR2IF `VEb  1 e 0 @97 ]
+"8 /Users/jun/Documents/PMR3406/PI-7/PID/position_sensor.X/position_sensor.c
+[v _pos_currentPosition pos_currentPosition `VEl  1 e 4 0 ]
+"9
+[v _enc_states enc_states `DC[16]uc  1 e 16 0 ]
+"59 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f886.h
+[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+"166
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"228
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+[s S45 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"403
+[s S54 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+[u S59 . 1 `S45 1 . 1 0 `S54 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES59  1 e 1 @11 ]
+"1054
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
+"1061
+[v _RCREG RCREG `VEuc  1 e 1 @26 ]
+"1267
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
+"1337
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1399
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1461
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"2188
+[v _WPUB WPUB `VEuc  1 e 1 @149 ]
+"2258
+[v _IOCB IOCB `VEuc  1 e 1 @150 ]
+"2484
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+"2546
+[v _SPBRGH SPBRGH `VEuc  1 e 1 @154 ]
+"3229
+[v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
+"3273
+[v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
+"3487
+[v _BRG16 BRG16 `VEb  1 e 0 @3131 ]
+"3514
+[v _BRGH BRGH `VEb  1 e 0 @1218 ]
+"3655
+[v _CREN CREN `VEb  1 e 0 @196 ]
+"3706
+[v _FERR FERR `VEb  1 e 0 @194 ]
+"3820
+[v _OERR OERR `VEb  1 e 0 @193 ]
+"3910
+[v _RA4 RA4 `VEb  1 e 0 @44 ]
+"3937
+[v _RB5 RB5 `VEb  1 e 0 @53 ]
+"3946
+[v _RBIE RBIE `VEb  1 e 0 @91 ]
+"3949
+[v _RBIF RBIF `VEb  1 e 0 @88 ]
+"3991
+[v _RCIE RCIE `VEb  1 e 0 @1125 ]
+"3994
+[v _RCIF RCIF `VEb  1 e 0 @101 ]
+"4015
+[v _RX9 RX9 `VEb  1 e 0 @198 ]
+"4045
+[v _SPEN SPEN `VEb  1 e 0 @199 ]
+"4054
+[v _SREN SREN `VEb  1 e 0 @197 ]
+"4099
+[v _SYNC SYNC `VEb  1 e 0 @1220 ]
+"4105
+[v _T0IE T0IE `VEb  1 e 0 @93 ]
+"4108
+[v _T0IF T0IF `VEb  1 e 0 @90 ]
+"4282
+[v _TX9 TX9 `VEb  1 e 0 @1222 ]
+"4291
+[v _TXEN TXEN `VEb  1 e 0 @1221 ]
+"4294
+[v _TXIE TXIE `VEb  1 e 0 @1124 ]
+"4297
+[v _TXIF TXIF `VEb  1 e 0 @100 ]
+"21 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\delay.c
+[v _delayus_variable delayus_variable `uc  1 e 1 0 ]
+[s S351 . 7 `*.27(v 1 taskFunction 1 0 `i 1 scheduleInterval 2 1 `l 1 lastActivation 4 3 ]
+"15 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\multitasking.c
+[v _tsk_tasks tsk_tasks `[3]S351  1 s 21 tsk_tasks ]
+"16
+[v _tsk_task tsk_task `*.27(v  1 s 1 tsk_task ]
+"17
+[v _tsk_elapsedTime tsk_elapsedTime `l  1 s 4 tsk_elapsedTime ]
+"14 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\pid.c
+[v _currentPosition currentPosition `f  1 s 4 currentPosition ]
+"15
+[v _setPoint setPoint `f  1 s 4 setPoint ]
+"16
+[v _integralError integralError `f  1 s 4 integralError ]
+"17
+[v _previousError previousError `f  1 s 4 previousError ]
+"18
+[v _kProportional kProportional `f  1 s 4 kProportional ]
+"19
+[v _kIntegral kIntegral `f  1 s 4 kIntegral ]
+"20
+[v _kDerivative kDerivative `f  1 s 4 kDerivative ]
+"36
+[v _activation activation `f  1 s 4 activation ]
+"37
+[v _error error `f  1 s 4 error ]
+"38
+[v _excitation excitation `i  1 s 2 excitation ]
+"23 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\protocol.c
+[v _pro_myAddress pro_myAddress `uc  1 e 1 0 ]
+"24
+[v _pro_incoming pro_incoming `[12]uc  1 e 12 0 ]
+"25
+[v _pro_status pro_status `uc  1 e 1 0 ]
+"26
+[v _pro_ptr pro_ptr `uc  1 e 1 0 ]
+[s S180 . 11 `uc 1 messageType 1 0 `[10]uc 1 value 10 1 ]
+"28
+[v _completeMessage completeMessage `S180  1 e 11 0 ]
+"84 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\serial.c
+[v _dummy dummy `uc  1 e 1 0 ]
+"39 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\tasks.c
+[v _value value `f  1 s 4 value ]
+"40
+[v _message message `S180  1 s 11 message ]
+"116 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\position_controller_main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"122
+} 0
+"107
+[v _sys_init sys_init `(v  1 e 1 0 ]
+{
+"110
+} 0
+"49
+[v _pic_init pic_init `(v  1 e 1 0 ]
+{
+"73
+} 0
+"80 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\tasks.c
+[v _initTasks initTasks `(v  1 e 1 0 ]
+{
+"92
+} 0
+"183 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\protocol.c
+[v _pro_setMyId pro_setMyId `(v  1 e 1 0 ]
+{
+[v pro_setMyId@id id `uc  1 p 1 wreg ]
+[v pro_setMyId@id id `uc  1 p 1 wreg ]
+[v pro_setMyId@id id `uc  1 p 1 4 ]
+"185
+} 0
+"173
+[v _pro_init pro_init `(v  1 e 1 0 ]
+{
+"178
+} 0
+"29 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\serial.c
+[v _ser_init ser_init `(v  1 e 1 0 ]
+{
+"82
+} 0
+"11 /Users/jun/Documents/PMR3406/PI-7/PID/position_sensor.X/position_sensor.c
+[v _pos_init pos_init `(v  1 e 1 0 ]
+{
+"30
+} 0
+"79 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\pid.c
+[v _pid_init pid_init `(v  1 e 1 0 ]
+{
+"86
+} 0
+"49 motor.c
+[v _mot_init mot_init `(v  1 e 1 0 ]
+{
+"65
+} 0
+"19 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\multitasking.c
+[v _createTask createTask `(v  1 e 1 0 ]
+{
+[v createTask@taskID taskID `i  1 p 2 7 ]
+[v createTask@t t `*.27(v  1 p 1 9 ]
+[v createTask@scheduleInterval scheduleInterval `i  1 p 2 10 ]
+"23
+} 0
+"25
+[v _executeTasks executeTasks `(v  1 e 1 0 ]
+{
+"26
+[v executeTasks@i i `uc  1 a 1 22 ]
+"36
+} 0
+"72 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\tasks.c
+[v _led_task led_task `(v  1 e 1 0 ]
+{
+"74
+} 0
+"33
+[v _pid_task pid_task `(v  1 e 1 0 ]
+{
+"35
+} 0
+"41
+[v _protocol_task protocol_task `(v  1 e 1 0 ]
+{
+"68
+} 0
+"41 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X/protocol.h
+[s S180 . 11 `uc 1 messageType 1 0 `[10]uc 1 value 10 1 ]
+"99 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\protocol.c
+[v _pro_getMessage pro_getMessage `(S180  1 e 11 0 ]
+{
+"146
+[v pro_getMessage@i i `uc  1 a 1 22 ]
+"100
+[v pro_getMessage@aChar aChar `uc  1 a 1 23 ]
+"168
+} 0
+"70
+[v _toMsgType toMsgType `(uc  1 e 1 0 ]
+{
+[v toMsgType@aChar aChar `uc  1 p 1 wreg ]
+[v toMsgType@aChar aChar `uc  1 p 1 wreg ]
+[v toMsgType@aChar aChar `uc  1 p 1 4 ]
+"82
+} 0
+"102 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\serial.c
+[v _putch putch `(v  1 e 1 0 ]
+{
+[v putch@c c `uc  1 p 1 wreg ]
+[v putch@c c `uc  1 p 1 wreg ]
+[v putch@c c `uc  1 p 1 4 ]
+"111
+} 0
+"55 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\protocol.c
+[v _isValidCmd isValidCmd `(i  1 e 2 0 ]
+{
+[v isValidCmd@aChar aChar `uc  1 p 1 wreg ]
+[v isValidCmd@aChar aChar `uc  1 p 1 wreg ]
+[v isValidCmd@aChar aChar `uc  1 p 1 6 ]
+"63
+} 0
+"85
+[v _isValid isValid `(i  1 e 2 0 ]
+{
+[v isValid@aChar aChar `uc  1 p 1 wreg ]
+[v isValid@aChar aChar `uc  1 p 1 wreg ]
+[v isValid@aChar aChar `uc  1 p 1 6 ]
+"94
+} 0
+"50
+[v _framingError framingError `(v  1 e 1 0 ]
+{
+"53
+} 0
+"38
+[v _cleanupBuffer cleanupBuffer `(v  1 e 1 0 ]
+{
+"39
+[v cleanupBuffer@i i `uc  1 a 1 6 ]
+"47
+} 0
+"156 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\serial.c
+[v _clear_usart_errors clear_usart_errors `(v  1 e 1 0 ]
+{
+"159
+} 0
+"149
+[v _chkchr chkchr `(uc  1 e 1 0 ]
+{
+"154
+} 0
+"65 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\protocol.c
+[v _addToIncomingBuffer addToIncomingBuffer `(v  1 e 1 0 ]
+{
+[v addToIncomingBuffer@aChar aChar `uc  1 p 1 wreg ]
+[v addToIncomingBuffer@aChar aChar `uc  1 p 1 wreg ]
+[v addToIncomingBuffer@aChar aChar `uc  1 p 1 4 ]
+"68
+} 0
+"48 /Users/jun/Documents/PMR3406/PI-7/PID/position_sensor.X/position_sensor.c
+[v _pos_setCurrentPosition pos_setCurrentPosition `(v  1 e 1 0 ]
+{
+[v pos_setCurrentPosition@pos pos `l  1 p 4 4 ]
+"50
+} 0
+"70 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\pid.c
+[v _pid_setProportionalGain pid_setProportionalGain `(v  1 e 1 0 ]
+{
+[v pid_setProportionalGain@gain gain `f  1 p 4 4 ]
+"72
+} 0
+"58
+[v _pid_setPoint pid_setPoint `(v  1 e 1 0 ]
+{
+[v pid_setPoint@position position `f  1 p 4 4 ]
+"60
+} 0
+"66
+[v _pid_setIntegralGain pid_setIntegralGain `(v  1 e 1 0 ]
+{
+[v pid_setIntegralGain@gain gain `f  1 p 4 4 ]
+"68
+} 0
+"62
+[v _pid_setDerivativeGain pid_setDerivativeGain `(v  1 e 1 0 ]
+{
+[v pid_setDerivativeGain@gain gain `f  1 p 4 4 ]
+"64
+} 0
+"74
+[v _pid_clearError pid_clearError `(v  1 e 1 0 ]
+{
+"77
+} 0
+"13 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\utils.c
+[v _convertToReal convertToReal `(f  1 e 4 0 ]
+{
+"14
+[v convertToReal@value value `f  1 a 4 13 ]
+"16
+[v convertToReal@potDez potDez `f  1 a 4 9 ]
+"15
+[v convertToReal@temp temp `f  1 a 4 5 ]
+"17
+[v convertToReal@signal signal `f  1 a 4 0 ]
+"19
+[v convertToReal@i i `uc  1 a 1 17 ]
+"18
+[v convertToReal@decimal decimal `uc  1 a 1 4 ]
+"13
+[v convertToReal@chars chars `*.39uc  1 p 2 59 ]
+"47
+} 0
+"40 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\pid.c
+[v _pid_pid pid_pid `(v  1 e 1 0 ]
+{
+"56
+} 0
+"52 /Users/jun/Documents/PMR3406/PI-7/PID/position_sensor.X/position_sensor.c
+[v _pos_getCurrentPosition pos_getCurrentPosition `(l  1 e 4 0 ]
+{
+"54
+} 0
+"22 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\pid.c
+[v _pid_scaleExcitation pid_scaleExcitation `(i  1 e 2 0 ]
+{
+[v pid_scaleExcitation@activation activation `f  1 p 4 14 ]
+"34
+} 0
+"43 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 13 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 12 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 4 ]
+"70
+} 0
+"7 motor.c
+[v _mot_setExcitation mot_setExcitation `(v  1 e 1 0 ]
+{
+"8
+[v mot_setExcitation@value value `i  1 a 2 8 ]
+"7
+[v mot_setExcitation@excitation excitation `i  1 p 2 4 ]
+"34
+} 0
+"10 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 p 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 18 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 17 ]
+"10
+[v ___xxtofl@sign sign `uc  1 p 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 8 ]
+"15
+[v ___xxtofl@sign sign `uc  1 p 1 16 ]
+"44
+} 0
+"242 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcadd.c
+[v ___flsub __flsub `(d  1 e 4 0 ]
+{
+[v ___flsub@a a `d  1 p 4 59 ]
+[v ___flsub@b b `d  1 p 4 63 ]
+"250
+} 0
+"10
+[v ___fladd __fladd `(d  1 e 4 0 ]
+{
+"17
+[v ___fladd@grs grs `uc  1 a 1 58 ]
+"15
+[v ___fladd@bexp bexp `uc  1 a 1 57 ]
+"16
+[v ___fladd@aexp aexp `uc  1 a 1 56 ]
+"13
+[v ___fladd@signs signs `uc  1 a 1 55 ]
+"10
+[v ___fladd@b b `d  1 p 4 39 ]
+[v ___fladd@a a `d  1 p 4 43 ]
+"237
+} 0
+"8 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S726 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S731 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S734 . 4 `l 1 i 4 0 `d 1 f 4 0 `S726 1 fAsBytes 4 0 `S731 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S734  1 a 4 33 ]
+"12
+[v ___flmul@grs grs `ul  1 a 4 28 ]
+[s S803 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S806 . 2 `s 1 i 2 0 `us 1 n 2 0 `S803 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S806  1 a 2 37 ]
+"10
+[v ___flmul@bexp bexp `uc  1 a 1 32 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 27 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 26 ]
+"8
+[v ___flmul@b b `d  1 p 4 13 ]
+[v ___flmul@a a `d  1 p 4 17 ]
+"205
+} 0
+"4 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+{
+[v __Umul8_16@multiplier multiplier `uc  1 p 1 wreg ]
+"6
+[v __Umul8_16@word_mpld word_mpld `us  1 a 2 10 ]
+"5
+[v __Umul8_16@product product `us  1 a 2 8 ]
+"4
+[v __Umul8_16@multiplier multiplier `uc  1 p 1 wreg ]
+[v __Umul8_16@multiplicand multiplicand `uc  1 p 1 4 ]
+[v __Umul8_16@multiplier multiplier `uc  1 p 1 12 ]
+"60
+} 0
+"8 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+{
+"21
+[v ___fldiv@grs grs `ul  1 a 4 24 ]
+"22
+[v ___fldiv@rem rem `ul  1 a 4 17 ]
+"20
+[v ___fldiv@new_exp new_exp `s  1 a 2 22 ]
+"19
+[v ___fldiv@aexp aexp `uc  1 a 1 29 ]
+"18
+[v ___fldiv@bexp bexp `uc  1 a 1 28 ]
+"16
+[v ___fldiv@sign sign `uc  1 a 1 21 ]
+"8
+[v ___fldiv@a a `d  1 p 4 4 ]
+[v ___fldiv@b b `d  1 p 4 8 ]
+"185
+} 0
+"4 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v ___bmul@multiplier multiplier `uc  1 p 1 wreg ]
+"6
+[v ___bmul@product product `uc  1 a 1 5 ]
+"4
+[v ___bmul@multiplier multiplier `uc  1 p 1 wreg ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 4 ]
+"6
+[v ___bmul@multiplier multiplier `uc  1 p 1 6 ]
+"51
+} 0
+"80 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidByPI7FUNCIONAL\pidx.X\position_controller_main.c
+[v _isr isr `II(v  1 e 1 0 ]
+{
+"97
+[v isr@portB portB `uc  1 a 1 12 ]
+"82
+[v isr@interruptCounter interruptCounter `i  1 s 2 interruptCounter ]
+"101
+} 0
+"38 /Users/jun/Documents/PMR3406/PI-7/PID/position_sensor.X/position_sensor.c
+[v _pos_UpdatePosition pos_UpdatePosition `(v  1 e 1 0 ]
+{
+[v pos_UpdatePosition@port port `uc  1 p 1 wreg ]
+"40
+[v pos_UpdatePosition@curr_state curr_state `uc  1 a 1 11 ]
+"38
+[v pos_UpdatePosition@port port `uc  1 p 1 wreg ]
+[v pos_UpdatePosition@init init `uc  1 p 1 4 ]
+[v pos_UpdatePosition@dir dir `uc  1 p 1 5 ]
+"39
+[v pos_UpdatePosition@prev_state prev_state `uc  1 s 1 prev_state ]
+[v pos_UpdatePosition@port port `uc  1 p 1 10 ]
+"46
+} 0
+"32
+[v _pos_encoderStatus pos_encoderStatus `(c  1 e 1 0 ]
+{
+[v pos_encoderStatus@prev prev `uc  1 p 1 wreg ]
+[v pos_encoderStatus@prev prev `uc  1 p 1 wreg ]
+[v pos_encoderStatus@curr curr `uc  1 p 1 0 ]
+"34
+[v pos_encoderStatus@prev prev `uc  1 p 1 3 ]
+"36
+} 0

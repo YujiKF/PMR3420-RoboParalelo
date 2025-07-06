@@ -1,0 +1,91 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[v F16 `(v ~T0 @X0 0 tf ]
+"9 multitasking.c
+[; ;multitasking.c: 9: typedef struct {
+[s S1 `*F16 1 `i 1 `l 1 ]
+[n S1 . taskFunction scheduleInterval lastActivation ]
+[v F22 `(v ~T0 @X0 0 tf ]
+[v F25 `(v ~T0 @X0 0 tf ]
+[v F28 `(v ~T0 @X0 0 tf ]
+"4 ./multitasking.h
+[; ;./multitasking.h: 4: volatile long tsk_timeStamp;
+[v _tsk_timeStamp `Vl ~T0 @X0 1 e ]
+"15 multitasking.c
+[; ;multitasking.c: 15: static TaskControlBlock tsk_tasks[3];
+[v _tsk_tasks `S1 ~T0 @X0 -> 3 `i s ]
+"16
+[; ;multitasking.c: 16: static Task tsk_task;
+[v _tsk_task `*F22 ~T0 @X0 1 s ]
+"17
+[; ;multitasking.c: 17: static long tsk_elapsedTime;
+[v _tsk_elapsedTime `l ~T0 @X0 1 s ]
+"19
+[; ;multitasking.c: 19: void createTask(int taskID, Task t, int scheduleInterval) {
+[v _createTask `(v ~T0 @X0 1 ef3`i`*F25`i ]
+{
+[e :U _createTask ]
+[v _taskID `i ~T0 @X0 1 r1 ]
+[v _t `*F28 ~T0 @X0 1 r2 ]
+[v _scheduleInterval `i ~T0 @X0 1 r3 ]
+[f ]
+"20
+[; ;multitasking.c: 20:     tsk_tasks[taskID].taskFunction = t;
+[e = . *U + &U _tsk_tasks * -> -> _taskID `ui `ux -> -> # *U &U _tsk_tasks `ui `ux 0 _t ]
+"21
+[; ;multitasking.c: 21:     tsk_tasks[taskID].scheduleInterval = scheduleInterval;
+[e = . *U + &U _tsk_tasks * -> -> _taskID `ui `ux -> -> # *U &U _tsk_tasks `ui `ux 1 _scheduleInterval ]
+"22
+[; ;multitasking.c: 22:     tsk_tasks[taskID].lastActivation = 0;
+[e = . *U + &U _tsk_tasks * -> -> _taskID `ui `ux -> -> # *U &U _tsk_tasks `ui `ux 2 -> -> 0 `i `l ]
+"23
+[; ;multitasking.c: 23: }
+[e :UE 2 ]
+}
+"25
+[; ;multitasking.c: 25: void executeTasks(void) {
+[v _executeTasks `(v ~T0 @X0 1 ef ]
+{
+[e :U _executeTasks ]
+[f ]
+"26
+[; ;multitasking.c: 26:     unsigned char i;
+[v _i `uc ~T0 @X0 1 a ]
+"28
+[; ;multitasking.c: 28:     for (i=0; i < 3; i++) {
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 3 `i 4  ]
+[e $U 5  ]
+[e :U 4 ]
+{
+"29
+[; ;multitasking.c: 29:        tsk_elapsedTime = tsk_timeStamp - tsk_tasks[i].lastActivation;
+[e = _tsk_elapsedTime - _tsk_timeStamp . *U + &U _tsk_tasks * -> _i `ux -> -> # *U &U _tsk_tasks `ui `ux 2 ]
+"30
+[; ;multitasking.c: 30:        if (tsk_elapsedTime > tsk_tasks[i].scheduleInterval) {
+[e $ ! > _tsk_elapsedTime -> . *U + &U _tsk_tasks * -> _i `ux -> -> # *U &U _tsk_tasks `ui `ux 1 `l 7  ]
+{
+"31
+[; ;multitasking.c: 31:           tsk_task = tsk_tasks[i].taskFunction;
+[e = _tsk_task . *U + &U _tsk_tasks * -> _i `ux -> -> # *U &U _tsk_tasks `ui `ux 0 ]
+"32
+[; ;multitasking.c: 32:           tsk_task();
+[e ( *U _tsk_task ..  ]
+"33
+[; ;multitasking.c: 33:           tsk_tasks[i].lastActivation = tsk_timeStamp;
+[e = . *U + &U _tsk_tasks * -> _i `ux -> -> # *U &U _tsk_tasks `ui `ux 2 _tsk_timeStamp ]
+"34
+[; ;multitasking.c: 34:        }
+}
+[e :U 7 ]
+"35
+[; ;multitasking.c: 35:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 3 `i 4  ]
+[e :U 5 ]
+}
+"36
+[; ;multitasking.c: 36: }
+[e :UE 3 ]
+}

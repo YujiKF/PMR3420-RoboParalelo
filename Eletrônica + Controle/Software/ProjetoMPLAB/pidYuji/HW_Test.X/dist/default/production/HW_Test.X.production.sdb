@@ -1,0 +1,1009 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F886 ]
+[d frameptr 0 ]
+"11 /Users/jun/Documents/PMR3406/PI-7/PID/position_sensor.X/position_sensor.c
+[v _pos_init pos_init `(v  1 e 1 0 ]
+"32
+[v _pos_encoderStatus pos_encoderStatus `(c  1 e 1 0 ]
+"38
+[v _pos_UpdatePosition pos_UpdatePosition `(v  1 e 1 0 ]
+"48
+[v _pos_setCurrentPosition pos_setCurrentPosition `(v  1 e 1 0 ]
+"52
+[v _pos_getCurrentPosition pos_getCurrentPosition `(l  1 e 4 0 ]
+"1 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"1177 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\doprnt.c
+[v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
+"1817
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
+"43 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+"8 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\printf.c
+[v _printf printf `(i  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"242
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"4 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+"6 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"26 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\key.c
+[v _key_init key_init `(v  1 e 1 0 ]
+"45
+[v _key_debounce key_debounce `(v  1 e 1 0 ]
+"58
+[v _key_read key_read `(v  1 e 1 0 ]
+"86
+[v _key_pressed key_pressed `(uc  1 e 1 0 ]
+"65 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\main.c
+[v _isr isr `II(v  1 e 1 0 ]
+"123
+[v _pic_init pic_init `(v  1 e 1 0 ]
+"149
+[v _main main `(v  1 e 1 0 ]
+"9 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\motor.c
+[v _mot_init mot_init `(v  1 e 1 0 ]
+"57
+[v _mot_setExcitation mot_setExcitation `(v  1 e 1 0 ]
+"22 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\pid.c
+[v _pid_scaleExcitation pid_scaleExcitation `(i  1 e 2 0 ]
+"41
+[v _pid_pid pid_pid `(v  1 e 1 0 ]
+"59
+[v _pid_setPoint pid_setPoint `(v  1 e 1 0 ]
+"63
+[v _pid_setDerivativeGain pid_setDerivativeGain `(v  1 e 1 0 ]
+"67
+[v _pid_setIntegralGain pid_setIntegralGain `(v  1 e 1 0 ]
+"71
+[v _pid_setProportionalGain pid_setProportionalGain `(v  1 e 1 0 ]
+"75
+[v _pid_clearError pid_clearError `(v  1 e 1 0 ]
+"80
+[v _pid_init pid_init `(v  1 e 1 0 ]
+"38 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\protocol.c
+[v _cleanupBuffer cleanupBuffer `(v  1 e 1 0 ]
+"50
+[v _framingError framingError `(v  1 e 1 0 ]
+"55
+[v _isValidCmd isValidCmd `(i  1 e 2 0 ]
+"65
+[v _addToIncomingBuffer addToIncomingBuffer `(v  1 e 1 0 ]
+"70
+[v _toMsgType toMsgType `(uc  1 e 1 0 ]
+"85
+[v _isValid isValid `(i  1 e 2 0 ]
+"41 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X/protocol.h
+[s S84 . 11 `uc 1 messageType 1 0 `[10]uc 1 value 10 1 ]
+"99 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\protocol.c
+[v _pro_getMessage pro_getMessage `(S84  1 e 11 0 ]
+"173
+[v _pro_init pro_init `(v  1 e 1 0 ]
+"183
+[v _pro_setMyId pro_setMyId `(v  1 e 1 0 ]
+"80 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\pwm.c
+[v _pwm_set pwm_set `(v  1 e 1 0 ]
+"29 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\serial.c
+[v _ser_init ser_init `(v  1 e 1 0 ]
+"102
+[v _putch putch `(v  1 e 1 0 ]
+"149
+[v _chkchr chkchr `(uc  1 e 1 0 ]
+"156
+[v _clear_usart_errors clear_usart_errors `(v  1 e 1 0 ]
+"168
+[v _putchhex putchhex `(v  1 e 1 0 ]
+"231
+[v _putst putst `(v  1 e 1 0 ]
+"44 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\spi.c
+[v _spi_exchange spi_exchange `(uc  1 e 1 0 ]
+"13 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\utils.c
+[v _convertToReal convertToReal `(f  1 e 4 0 ]
+"49
+[v _printReal printReal `(v  1 e 1 0 ]
+"8 /Users/jun/Documents/PMR3406/PI-7/PID/position_sensor.X/position_sensor.c
+[v _pos_currentPosition pos_currentPosition `VEl  1 e 4 0 ]
+"9
+[v _enc_states enc_states `DC[16]uc  1 e 16 0 ]
+"59 C:/Program Files/Microchip/MPLABX/v6.25/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc/pic16f886.h
+[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+"166
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"228
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+[s S116 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"403
+[s S125 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 TMR0IE 1 0 :1:5 
+]
+[u S130 . 1 `S116 1 . 1 0 `S125 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES130  1 e 1 @11 ]
+[s S260 . 1 `uc 1 T2CKPS 1 0 :2:0 
+`uc 1 TMR2ON 1 0 :1:2 
+`uc 1 TOUTPS 1 0 :4:3 
+]
+"714
+[s S264 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+`uc 1 T2CKPS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 TOUTPS0 1 0 :1:3 
+`uc 1 TOUTPS1 1 0 :1:4 
+`uc 1 TOUTPS2 1 0 :1:5 
+`uc 1 TOUTPS3 1 0 :1:6 
+]
+[u S272 . 1 `S260 1 . 1 0 `S264 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES272  1 e 1 @18 ]
+"764
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
+[s S772 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"791
+[s S778 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S783 . 1 `S772 1 . 1 0 `S778 1 . 1 0 ]
+[v _SSPCONbits SSPCONbits `VES783  1 e 1 @20 ]
+"848
+[v _CCPR1L CCPR1L `VEuc  1 e 1 @21 ]
+[s S288 . 1 `uc 1 CCP1M 1 0 :4:0 
+`uc 1 DC1B 1 0 :2:4 
+`uc 1 P1M 1 0 :2:6 
+]
+"889
+[s S292 . 1 `uc 1 CCP1M0 1 0 :1:0 
+`uc 1 CCP1M1 1 0 :1:1 
+`uc 1 CCP1M2 1 0 :1:2 
+`uc 1 CCP1M3 1 0 :1:3 
+`uc 1 DC1B0 1 0 :1:4 
+`uc 1 DC1B1 1 0 :1:5 
+`uc 1 P1M0 1 0 :1:6 
+`uc 1 P1M1 1 0 :1:7 
+]
+[s S301 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 CCP1Y 1 0 :1:4 
+`uc 1 CCP1X 1 0 :1:5 
+]
+[u S305 . 1 `S288 1 . 1 0 `S292 1 . 1 0 `S301 1 . 1 0 ]
+[v _CCP1CONbits CCP1CONbits `VES305  1 e 1 @23 ]
+"1054
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
+"1061
+[v _RCREG RCREG `VEuc  1 e 1 @26 ]
+"1075
+[v _CCPR2L CCPR2L `VEuc  1 e 1 @27 ]
+[s S328 . 1 `uc 1 CCP2M 1 0 :4:0 
+`uc 1 DC2B0 1 0 :1:4 
+`uc 1 DC2B1 1 0 :1:5 
+]
+"1109
+[s S332 . 1 `uc 1 CCP2M0 1 0 :1:0 
+`uc 1 CCP2M1 1 0 :1:1 
+`uc 1 CCP2M2 1 0 :1:2 
+`uc 1 CCP2M3 1 0 :1:3 
+`uc 1 CCP2Y 1 0 :1:4 
+`uc 1 CCP2X 1 0 :1:5 
+]
+[u S339 . 1 `S328 1 . 1 0 `S332 1 . 1 0 ]
+[v _CCP2CONbits CCP2CONbits `VES339  1 e 1 @29 ]
+"1159
+[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
+[s S406 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :4:2 
+`uc 1 ADCS 1 0 :2:6 
+]
+"1197
+[s S411 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+`uc 1 ADCS0 1 0 :1:6 
+`uc 1 ADCS1 1 0 :1:7 
+]
+[s S420 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[s S423 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+]
+[u S426 . 1 `S406 1 . 1 0 `S411 1 . 1 0 `S420 1 . 1 0 `S423 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES426  1 e 1 @31 ]
+"1267
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
+[s S45 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nRBPU 1 0 :1:7 
+]
+"1287
+[s S52 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+]
+[u S56 . 1 `S45 1 . 1 0 `S52 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES56  1 e 1 @129 ]
+"1337
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1399
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1461
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1883
+[v _PR2 PR2 `VEuc  1 e 1 @146 ]
+[s S800 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"2073
+[s S809 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D 1 0 :1:5 
+]
+[s S814 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ 1 0 :1:2 
+`uc 1 I2C_START 1 0 :1:3 
+`uc 1 I2C_STOP 1 0 :1:4 
+`uc 1 I2C_DATA 1 0 :1:5 
+]
+[s S820 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S825 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S830 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S835 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 DATA_ADDRESS 1 0 :1:5 
+]
+[u S840 . 1 `S800 1 . 1 0 `S809 1 . 1 0 `S814 1 . 1 0 `S820 1 . 1 0 `S825 1 . 1 0 `S830 1 . 1 0 `S835 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES840  1 e 1 @148 ]
+"2188
+[v _WPUB WPUB `VEuc  1 e 1 @149 ]
+"2258
+[v _IOCB IOCB `VEuc  1 e 1 @150 ]
+"2484
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
+"2546
+[v _SPBRGH SPBRGH `VEuc  1 e 1 @154 ]
+"2812
+[v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
+[s S452 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 VCFG0 1 0 :1:4 
+`uc 1 VCFG1 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 ADFM 1 0 :1:7 
+]
+"2833
+[u S458 . 1 `S452 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES458  1 e 1 @159 ]
+"3229
+[v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
+"3273
+[v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
+"3412
+[v _ADIE ADIE `VEb  1 e 0 @1126 ]
+"3415
+[v _ADIF ADIF `VEb  1 e 0 @102 ]
+"3418
+[v _ADON ADON `VEb  1 e 0 @248 ]
+"3421
+[v _ANS0 ANS0 `VEb  1 e 0 @3136 ]
+"3424
+[v _ANS1 ANS1 `VEb  1 e 0 @3137 ]
+"3427
+[v _ANS10 ANS10 `VEb  1 e 0 @3146 ]
+"3430
+[v _ANS11 ANS11 `VEb  1 e 0 @3147 ]
+"3433
+[v _ANS12 ANS12 `VEb  1 e 0 @3148 ]
+"3436
+[v _ANS13 ANS13 `VEb  1 e 0 @3149 ]
+"3439
+[v _ANS2 ANS2 `VEb  1 e 0 @3138 ]
+"3442
+[v _ANS3 ANS3 `VEb  1 e 0 @3139 ]
+"3445
+[v _ANS4 ANS4 `VEb  1 e 0 @3140 ]
+"3448
+[v _ANS8 ANS8 `VEb  1 e 0 @3144 ]
+"3451
+[v _ANS9 ANS9 `VEb  1 e 0 @3145 ]
+"3487
+[v _BRG16 BRG16 `VEb  1 e 0 @3131 ]
+"3514
+[v _BRGH BRGH `VEb  1 e 0 @1218 ]
+"3649
+[v _CKE CKE `VEb  1 e 0 @1190 ]
+"3652
+[v _CKP CKP `VEb  1 e 0 @164 ]
+"3655
+[v _CREN CREN `VEb  1 e 0 @196 ]
+"3706
+[v _FERR FERR `VEb  1 e 0 @194 ]
+"3718
+[v _GO GO `VEb  1 e 0 @249 ]
+"3769
+[v _IOCB6 IOCB6 `VEb  1 e 0 @1206 ]
+"3820
+[v _OERR OERR `VEb  1 e 0 @193 ]
+"3910
+[v _RA4 RA4 `VEb  1 e 0 @44 ]
+"3913
+[v _RA5 RA5 `VEb  1 e 0 @45 ]
+"3916
+[v _RA6 RA6 `VEb  1 e 0 @46 ]
+"3922
+[v _RB0 RB0 `VEb  1 e 0 @48 ]
+"3937
+[v _RB5 RB5 `VEb  1 e 0 @53 ]
+"3946
+[v _RBIE RBIE `VEb  1 e 0 @91 ]
+"3949
+[v _RBIF RBIF `VEb  1 e 0 @88 ]
+"3952
+[v _RC0 RC0 `VEb  1 e 0 @56 ]
+"3991
+[v _RCIE RCIE `VEb  1 e 0 @1125 ]
+"3994
+[v _RCIF RCIF `VEb  1 e 0 @101 ]
+"4015
+[v _RX9 RX9 `VEb  1 e 0 @198 ]
+"4042
+[v _SMP SMP `VEb  1 e 0 @1191 ]
+"4045
+[v _SPEN SPEN `VEb  1 e 0 @199 ]
+"4054
+[v _SREN SREN `VEb  1 e 0 @197 ]
+"4057
+[v _SSPEN SSPEN `VEb  1 e 0 @165 ]
+"4099
+[v _SYNC SYNC `VEb  1 e 0 @1220 ]
+"4105
+[v _T0IE T0IE `VEb  1 e 0 @93 ]
+"4144
+[v _TMR0IE TMR0IE `VEb  1 e 0 @93 ]
+"4147
+[v _TMR0IF TMR0IF `VEb  1 e 0 @90 ]
+"4168
+[v _TMR2IF TMR2IF `VEb  1 e 0 @97 ]
+"4171
+[v _TMR2ON TMR2ON `VEb  1 e 0 @146 ]
+"4186
+[v _TRISA0 TRISA0 `VEb  1 e 0 @1064 ]
+"4189
+[v _TRISA1 TRISA1 `VEb  1 e 0 @1065 ]
+"4192
+[v _TRISA2 TRISA2 `VEb  1 e 0 @1066 ]
+"4195
+[v _TRISA3 TRISA3 `VEb  1 e 0 @1067 ]
+"4201
+[v _TRISA5 TRISA5 `VEb  1 e 0 @1069 ]
+"4204
+[v _TRISA6 TRISA6 `VEb  1 e 0 @1070 ]
+"4210
+[v _TRISB0 TRISB0 `VEb  1 e 0 @1072 ]
+"4213
+[v _TRISB1 TRISB1 `VEb  1 e 0 @1073 ]
+"4216
+[v _TRISB2 TRISB2 `VEb  1 e 0 @1074 ]
+"4222
+[v _TRISB4 TRISB4 `VEb  1 e 0 @1076 ]
+"4225
+[v _TRISB5 TRISB5 `VEb  1 e 0 @1077 ]
+"4228
+[v _TRISB6 TRISB6 `VEb  1 e 0 @1078 ]
+"4234
+[v _TRISC0 TRISC0 `VEb  1 e 0 @1080 ]
+"4237
+[v _TRISC1 TRISC1 `VEb  1 e 0 @1081 ]
+"4240
+[v _TRISC2 TRISC2 `VEb  1 e 0 @1082 ]
+"4243
+[v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
+"4246
+[v _TRISC4 TRISC4 `VEb  1 e 0 @1084 ]
+"4249
+[v _TRISC5 TRISC5 `VEb  1 e 0 @1085 ]
+"4282
+[v _TX9 TX9 `VEb  1 e 0 @1222 ]
+"4291
+[v _TXEN TXEN `VEb  1 e 0 @1221 ]
+"4294
+[v _TXIE TXIE `VEb  1 e 0 @1124 ]
+"4297
+[v _TXIF TXIF `VEb  1 e 0 @100 ]
+"4342
+[v _WCOL WCOL `VEb  1 e 0 @167 ]
+"4375
+[v _WPUB6 WPUB6 `VEb  1 e 0 @1198 ]
+"4417
+[v _nRBPU nRBPU `VEb  1 e 0 @1039 ]
+"153 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\doprnt.c
+[v _prec prec `i  1 s 2 prec ]
+[v _width width `i  1 s 2 width ]
+"154
+[v _flags flags `uc  1 s 1 flags ]
+"185
+[v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
+"18 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\key.c
+[v _keyPressed keyPressed `VEuc  1 e 1 0 ]
+"19
+[v _debounce debounce `VEuc  1 e 1 0 ]
+"20
+[v _keyStateChanged keyStateChanged `VEuc  1 e 1 0 ]
+"12 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\pid.c
+[v _excitation excitation `i  1 s 2 excitation ]
+"14
+[v _currentPosition currentPosition `f  1 s 4 currentPosition ]
+"15
+[v _setPoint setPoint `f  1 s 4 setPoint ]
+"16
+[v _integralError integralError `f  1 s 4 integralError ]
+"17
+[v _previousError previousError `f  1 s 4 previousError ]
+"18
+[v _kProportional kProportional `f  1 s 4 kProportional ]
+"19
+[v _kIntegral kIntegral `f  1 s 4 kIntegral ]
+"20
+[v _kDerivative kDerivative `f  1 s 4 kDerivative ]
+"23 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\protocol.c
+[v _pro_myAddress pro_myAddress `uc  1 e 1 0 ]
+"24
+[v _pro_incoming pro_incoming `[12]uc  1 e 12 0 ]
+"25
+[v _pro_status pro_status `uc  1 e 1 0 ]
+"26
+[v _pro_ptr pro_ptr `uc  1 e 1 0 ]
+[s S84 . 11 `uc 1 messageType 1 0 `[10]uc 1 value 10 1 ]
+"28
+[v _completeMessage completeMessage `S84  1 e 11 0 ]
+"84 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\serial.c
+[v _dummy dummy `uc  1 e 1 0 ]
+"149 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"214
+[v main@keyIn keyIn `uc  1 a 1 28 ]
+[s S84 . 11 `uc 1 messageType 1 0 `[10]uc 1 value 10 1 ]
+"150
+[v main@receivedMessage receivedMessage `S84  1 a 11 29 ]
+"151
+[v main@parsedValue parsedValue `f  1 a 4 40 ]
+"225
+} 0
+"231 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\serial.c
+[v _putst putst `(v  1 e 1 0 ]
+{
+[v putst@str str `*.24DCuc  1 p 1 5 ]
+"240
+} 0
+"183 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\protocol.c
+[v _pro_setMyId pro_setMyId `(v  1 e 1 0 ]
+{
+[v pro_setMyId@id id `uc  1 p 1 wreg ]
+[v pro_setMyId@id id `uc  1 p 1 wreg ]
+[v pro_setMyId@id id `uc  1 p 1 4 ]
+"185
+} 0
+"173
+[v _pro_init pro_init `(v  1 e 1 0 ]
+{
+"178
+} 0
+"29 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\serial.c
+[v _ser_init ser_init `(v  1 e 1 0 ]
+{
+"82
+} 0
+"41 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X/protocol.h
+[s S84 . 11 `uc 1 messageType 1 0 `[10]uc 1 value 10 1 ]
+"99 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\protocol.c
+[v _pro_getMessage pro_getMessage `(S84  1 e 11 0 ]
+{
+"146
+[v pro_getMessage@i i `uc  1 a 1 22 ]
+"100
+[v pro_getMessage@aChar aChar `uc  1 a 1 23 ]
+"168
+} 0
+"70
+[v _toMsgType toMsgType `(uc  1 e 1 0 ]
+{
+[v toMsgType@aChar aChar `uc  1 p 1 wreg ]
+[v toMsgType@aChar aChar `uc  1 p 1 wreg ]
+[v toMsgType@aChar aChar `uc  1 p 1 4 ]
+"82
+} 0
+"55
+[v _isValidCmd isValidCmd `(i  1 e 2 0 ]
+{
+[v isValidCmd@aChar aChar `uc  1 p 1 wreg ]
+[v isValidCmd@aChar aChar `uc  1 p 1 wreg ]
+[v isValidCmd@aChar aChar `uc  1 p 1 6 ]
+"63
+} 0
+"85
+[v _isValid isValid `(i  1 e 2 0 ]
+{
+[v isValid@aChar aChar `uc  1 p 1 wreg ]
+[v isValid@aChar aChar `uc  1 p 1 wreg ]
+[v isValid@aChar aChar `uc  1 p 1 6 ]
+"94
+} 0
+"50
+[v _framingError framingError `(v  1 e 1 0 ]
+{
+"53
+} 0
+"38
+[v _cleanupBuffer cleanupBuffer `(v  1 e 1 0 ]
+{
+"39
+[v cleanupBuffer@i i `uc  1 a 1 6 ]
+"47
+} 0
+"156 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\serial.c
+[v _clear_usart_errors clear_usart_errors `(v  1 e 1 0 ]
+{
+"159
+} 0
+"149
+[v _chkchr chkchr `(uc  1 e 1 0 ]
+{
+"154
+} 0
+"65 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\protocol.c
+[v _addToIncomingBuffer addToIncomingBuffer `(v  1 e 1 0 ]
+{
+[v addToIncomingBuffer@aChar aChar `uc  1 p 1 wreg ]
+[v addToIncomingBuffer@aChar aChar `uc  1 p 1 wreg ]
+[v addToIncomingBuffer@aChar aChar `uc  1 p 1 4 ]
+"68
+} 0
+"49 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\utils.c
+[v _printReal printReal `(v  1 e 1 0 ]
+{
+"63
+[v printReal@integerPart integerPart `i  1 a 2 13 ]
+"64
+[v printReal@decimalPart decimalPart `ui  1 a 2 11 ]
+"65
+[v printReal@signal signal `c  1 a 1 15 ]
+"49
+[v printReal@value value `f  1 p 4 6 ]
+"74
+} 0
+"5 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\printf.c
+[v _printf printf `(i  1 e 2 0 ]
+{
+"8
+[v printf@ap ap `[1]*.4v  1 a 1 36 ]
+"5
+[v printf@fmt fmt `*.24DCuc  1 p 1 30 ]
+"13
+} 0
+"1817 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\doprnt.c
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+{
+"1820
+[v vfprintf@cfmt cfmt `*.24uc  1 a 1 29 ]
+[s S1391 _IO_FILE 0 ]
+"1817
+[v vfprintf@fp fp `*.1S1391  1 p 1 26 ]
+[v vfprintf@fmt fmt `*.24DCuc  1 p 1 27 ]
+[v vfprintf@ap ap `*.4*.4v  1 p 1 28 ]
+"1840
+} 0
+"1177
+[v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
+{
+[u S1404 . 4 `i 1 sint 2 0 `ui 1 uint 2 0 `d 1 f 4 0 ]
+"1188
+[v vfpfcnvrt@convarg convarg `S1404  1 a 4 21 ]
+"1179
+[v vfpfcnvrt@c c `uc  1 a 1 25 ]
+[v vfpfcnvrt@cp cp `*.24uc  1 a 1 20 ]
+"1180
+[v vfpfcnvrt@done done `a  1 a 1 19 ]
+[s S1391 _IO_FILE 0 ]
+"1177
+[v vfpfcnvrt@fp fp `*.1S1391  1 p 1 14 ]
+[v vfpfcnvrt@fmt fmt `*.4*.24uc  1 p 1 15 ]
+[v vfpfcnvrt@ap ap `*.4*.4v  1 p 1 16 ]
+"1814
+} 0
+"8 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+{
+[v fputc@c c `i  1 p 2 5 ]
+[u S1369 . 1 `*.1uc 1 buffer 1 0 `*.1DCuc 1 source 1 0 ]
+[s S1372 _IO_FILE 10 `S1369 1 . 1 0 `i 1 count 2 1 `[3]uc 1 ungetbuf 3 3 `i 1 ungetcnt 2 6 `i 1 limit 2 8 ]
+[v fputc@fp fp `*.1S1372  1 p 1 7 ]
+"24
+} 0
+"102 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\serial.c
+[v _putch putch `(v  1 e 1 0 ]
+{
+[v putch@c c `uc  1 p 1 wreg ]
+[v putch@c c `uc  1 p 1 wreg ]
+[v putch@c c `uc  1 p 1 4 ]
+"111
+} 0
+"1 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+{
+[v abs@a a `i  1 p 2 10 ]
+"4
+} 0
+"5 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 9 ]
+[v ___awmod@counter counter `uc  1 a 1 8 ]
+"5
+[v ___awmod@divisor divisor `i  1 p 2 4 ]
+[v ___awmod@dividend dividend `i  1 p 2 6 ]
+"34
+} 0
+"5 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 10 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 9 ]
+[v ___awdiv@counter counter `uc  1 a 1 8 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 4 ]
+[v ___awdiv@dividend dividend `i  1 p 2 6 ]
+"41
+} 0
+"4 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
+{
+[v ___flge@ff1 ff1 `d  1 p 4 4 ]
+[v ___flge@ff2 ff2 `d  1 p 4 8 ]
+"19
+} 0
+"48 /Users/jun/Documents/PMR3406/PI-7/PID/position_sensor.X/position_sensor.c
+[v _pos_setCurrentPosition pos_setCurrentPosition `(v  1 e 1 0 ]
+{
+[v pos_setCurrentPosition@pos pos `l  1 p 4 4 ]
+"50
+} 0
+"11
+[v _pos_init pos_init `(v  1 e 1 0 ]
+{
+"30
+} 0
+"71 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\pid.c
+[v _pid_setProportionalGain pid_setProportionalGain `(v  1 e 1 0 ]
+{
+[v pid_setProportionalGain@gain gain `f  1 p 4 4 ]
+"73
+} 0
+"59
+[v _pid_setPoint pid_setPoint `(v  1 e 1 0 ]
+{
+[v pid_setPoint@position position `f  1 p 4 4 ]
+"61
+} 0
+"67
+[v _pid_setIntegralGain pid_setIntegralGain `(v  1 e 1 0 ]
+{
+[v pid_setIntegralGain@gain gain `f  1 p 4 4 ]
+"69
+} 0
+"63
+[v _pid_setDerivativeGain pid_setDerivativeGain `(v  1 e 1 0 ]
+{
+[v pid_setDerivativeGain@gain gain `f  1 p 4 4 ]
+"65
+} 0
+"41
+[v _pid_pid pid_pid `(v  1 e 1 0 ]
+{
+"48
+[v pid_pid@activation activation `f  1 a 4 14 ]
+"47
+[v pid_pid@error error `f  1 a 4 10 ]
+"57
+} 0
+"52 /Users/jun/Documents/PMR3406/PI-7/PID/position_sensor.X/position_sensor.c
+[v _pos_getCurrentPosition pos_getCurrentPosition `(l  1 e 4 0 ]
+{
+"54
+} 0
+"22 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\pid.c
+[v _pid_scaleExcitation pid_scaleExcitation `(i  1 e 2 0 ]
+{
+[v pid_scaleExcitation@activation activation `f  1 p 4 6 ]
+"34
+} 0
+"43 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 5 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 4 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 67 ]
+"70
+} 0
+"57 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\motor.c
+[v _mot_setExcitation mot_setExcitation `(v  1 e 1 0 ]
+{
+[v mot_setExcitation@excitation excitation `i  1 p 2 11 ]
+"75
+} 0
+"80 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\pwm.c
+[v _pwm_set pwm_set `(v  1 e 1 0 ]
+{
+[v pwm_set@channel channel `i  1 p 2 4 ]
+[v pwm_set@duty_cycle duty_cycle `i  1 p 2 6 ]
+"99
+} 0
+"242 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcadd.c
+[v ___flsub __flsub `(d  1 e 4 0 ]
+{
+[v ___flsub@a a `d  1 p 4 33 ]
+[v ___flsub@b b `d  1 p 4 37 ]
+"250
+} 0
+"8 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+{
+"21
+[v ___fldiv@grs grs `ul  1 a 4 24 ]
+"22
+[v ___fldiv@rem rem `ul  1 a 4 17 ]
+"20
+[v ___fldiv@new_exp new_exp `s  1 a 2 22 ]
+"19
+[v ___fldiv@aexp aexp `uc  1 a 1 29 ]
+"18
+[v ___fldiv@bexp bexp `uc  1 a 1 28 ]
+"16
+[v ___fldiv@sign sign `uc  1 a 1 21 ]
+"8
+[v ___fldiv@a a `d  1 p 4 4 ]
+[v ___fldiv@b b `d  1 p 4 8 ]
+"185
+} 0
+"80 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\pid.c
+[v _pid_init pid_init `(v  1 e 1 0 ]
+{
+"87
+} 0
+"75
+[v _pid_clearError pid_clearError `(v  1 e 1 0 ]
+{
+"78
+} 0
+"123 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\main.c
+[v _pic_init pic_init `(v  1 e 1 0 ]
+{
+"147
+} 0
+"9 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\motor.c
+[v _mot_init mot_init `(v  1 e 1 0 ]
+{
+"54
+} 0
+"86 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\key.c
+[v _key_pressed key_pressed `(uc  1 e 1 0 ]
+{
+"87
+[v key_pressed@state state `uc  1 a 1 4 ]
+"93
+} 0
+"26
+[v _key_init key_init `(v  1 e 1 0 ]
+{
+"33
+} 0
+"13 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\utils.c
+[v _convertToReal convertToReal `(f  1 e 4 0 ]
+{
+"14
+[v convertToReal@value value `f  1 a 4 19 ]
+"16
+[v convertToReal@potDez potDez `f  1 a 4 15 ]
+"15
+[v convertToReal@temp temp `f  1 a 4 11 ]
+"17
+[v convertToReal@signal signal `f  1 a 4 6 ]
+"19
+[v convertToReal@i i `uc  1 a 1 23 ]
+"18
+[v convertToReal@decimal decimal `uc  1 a 1 10 ]
+"13
+[v convertToReal@chars chars `*.39uc  1 p 2 67 ]
+"47
+} 0
+"10 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 p 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 18 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 17 ]
+"10
+[v ___xxtofl@sign sign `uc  1 p 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 8 ]
+"15
+[v ___xxtofl@sign sign `uc  1 p 1 16 ]
+"44
+} 0
+"8 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S1218 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S1223 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1226 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1218 1 fAsBytes 4 0 `S1223 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1226  1 a 4 61 ]
+"12
+[v ___flmul@grs grs `ul  1 a 4 55 ]
+[s S1295 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S1298 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1295 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1298  1 a 2 65 ]
+"10
+[v ___flmul@bexp bexp `uc  1 a 1 60 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 59 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 54 ]
+"8
+[v ___flmul@b b `d  1 p 4 41 ]
+[v ___flmul@a a `d  1 p 4 45 ]
+"205
+} 0
+"4 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+{
+[v __Umul8_16@multiplier multiplier `uc  1 p 1 wreg ]
+"6
+[v __Umul8_16@word_mpld word_mpld `us  1 a 2 10 ]
+"5
+[v __Umul8_16@product product `us  1 a 2 8 ]
+"4
+[v __Umul8_16@multiplier multiplier `uc  1 p 1 wreg ]
+[v __Umul8_16@multiplicand multiplicand `uc  1 p 1 4 ]
+[v __Umul8_16@multiplier multiplier `uc  1 p 1 12 ]
+"60
+} 0
+"10 C:\Program Files\Microchip\xc8\v3.00\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+{
+"17
+[v ___fladd@grs grs `uc  1 a 1 32 ]
+"15
+[v ___fladd@bexp bexp `uc  1 a 1 31 ]
+"16
+[v ___fladd@aexp aexp `uc  1 a 1 30 ]
+"13
+[v ___fladd@signs signs `uc  1 a 1 29 ]
+"10
+[v ___fladd@b b `d  1 p 4 13 ]
+[v ___fladd@a a `d  1 p 4 17 ]
+"237
+} 0
+"65 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\main.c
+[v _isr isr `II(v  1 e 1 0 ]
+{
+"99
+[v isr@portB portB `uc  1 a 1 12 ]
+"68
+[v isr@tick tick `i  1 s 2 tick ]
+"104
+} 0
+"38 /Users/jun/Documents/PMR3406/PI-7/PID/position_sensor.X/position_sensor.c
+[v _pos_UpdatePosition pos_UpdatePosition `(v  1 e 1 0 ]
+{
+[v pos_UpdatePosition@port port `uc  1 p 1 wreg ]
+"40
+[v pos_UpdatePosition@curr_state curr_state `uc  1 a 1 11 ]
+"38
+[v pos_UpdatePosition@port port `uc  1 p 1 wreg ]
+[v pos_UpdatePosition@init init `uc  1 p 1 4 ]
+[v pos_UpdatePosition@dir dir `uc  1 p 1 5 ]
+"39
+[v pos_UpdatePosition@prev_state prev_state `uc  1 s 1 prev_state ]
+[v pos_UpdatePosition@port port `uc  1 p 1 10 ]
+"46
+} 0
+"32
+[v _pos_encoderStatus pos_encoderStatus `(c  1 e 1 0 ]
+{
+[v pos_encoderStatus@prev prev `uc  1 p 1 wreg ]
+[v pos_encoderStatus@prev prev `uc  1 p 1 wreg ]
+[v pos_encoderStatus@curr curr `uc  1 p 1 0 ]
+"34
+[v pos_encoderStatus@prev prev `uc  1 p 1 3 ]
+"36
+} 0
+"58 C:\Users\caioy\OneDrive\Documentos\USP\7° Semestre\PMR3420 - Projeto Integrado 7\PMR3420-RoboParalelo\Eletrônica + Controle\Software\ProjetoMPLAB\pidYuji\HW_Test.X\key.c
+[v _key_read key_read `(v  1 e 1 0 ]
+{
+[v key_read@port port `uc  1 p 1 wreg ]
+"62
+[v key_read@key key `uc  1 a 1 2 ]
+"58
+[v key_read@port port `uc  1 p 1 wreg ]
+"59
+[v key_read@key_old key_old `uc  1 s 1 key_old ]
+"62
+[v key_read@port port `uc  1 p 1 1 ]
+"77
+} 0
+"45
+[v _key_debounce key_debounce `(v  1 e 1 0 ]
+{
+[v key_debounce@cycles cycles `i  1 p 2 0 ]
+"51
+} 0
